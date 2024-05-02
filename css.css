@@ -1,0 +1,184 @@
+body,
+header,
+ul,
+li,
+p,
+div,
+main,
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue1: hsl(211, 68%, 94%);
+  --light-grayish-blue2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--light-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--white);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 1rem;
+  background-color: var(--white);
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.noti {
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
+  gap: 1rem;
+}
+
+.count {
+  width: 2.3rem;
+  padding: 0.2rem;
+  background-color: var(--blue);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.noti p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+li:nth-child(2) {
+  display: flex;
+  align-items: center;
+  color: var(--dark-grayish-blue);
+  font-weight: bolder;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.one img,
+.two img,
+.three img,
+.four img,
+.five img,
+.six img,
+.seven img {
+  width: 40px;
+  height: 40px;
+}
+
+span {
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+span:hover {
+  color: var(--blue);
+}
+
+strong {
+  font-weight: bolder;
+  cursor: pointer;
+  color: var(--dark-grayish-blue);
+}
+
+strong:hover {
+  color: var(--blue);
+}
+
+.time {
+  font-size: 0.8rem;
+  color: var(--dark-grayish-blue);
+  margin-top: 0.5rem;
+}
+
+.appreciation {
+  border: 1px solid var(--light-grayish-blue2);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: var(--light-grayish-blue2);
+}
+
+.one,
+.two,
+.three {
+  background-color: var(--light-grayish-blue);
+}
+
+.chessImg {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.sentence::after {
+  content: "";
+  display: inline-block; /* Add this line */
+  border-radius: 50%;
+  background-color: var(--red);
+  width: 7px;
+  height: 7px;
+  margin-left: 5px;
+  box-shadow: 0 1px 2px rgba(253, 44, 44, 0.473);
+}
+
+.hide-after::after {
+  display: none;
+}
+
+@media screen and (min-width: 75rem) {
+  main,
+  header {
+    max-width: 42rem;
+  }
+
+  header{
+    width: 100%;
+  }
+}
